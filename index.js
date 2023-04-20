@@ -1,17 +1,29 @@
 
-/* // Import the Vite configuration from a separate file
-import viteConfig from './vite.config.js';
+/*import express from 'express';
 
-// Create a Vite server and add it as middleware to Express
-createServer({...viteConfig, server: { middlewareMode: true }}).then((vite) => {
-  app.use(vite.middlewares);
-  // Serve the built assets
-  app.use(express.static(path.join(__dirname, 'dist')));
+const app = express();
 
-  // Define a route that responds with a status code of 200
-  app.get('/', (req, res) => {
-    res.sendStatus(200);
-  });
+app.get('/', (req, res) => {
+  res.send('Hello, world!');
+});
+
+const port = 3000;
+
+app.listen(port, () => {
+  console.log(`Server listening on port ${port}`);
+});
+
+##
+import webpack from 'webpack';
+import config from './webpack.config.js';
+
+webpack(config, (err, stats) => {
+  if (err || stats.hasErrors()) {
+    console.error(err || stats.toString());
+    process.exit(1);
+  }
+  console.log(stats.toString());
+});
 */
 
 /* import { defineConfig } from 'vite';
