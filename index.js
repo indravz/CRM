@@ -17,9 +17,15 @@ createServer({...viteConfig, server: { middlewareMode: true }}).then((vite) => {
 /* import { defineConfig } from 'vite';
 
 export default defineConfig({
+  root: './',
+  base: './',
   build: {
-    outDir: 'dist'
-  }
+    outDir: 'dist',
+    assetsDir: '',
+    rollupOptions: {
+      input: 'app.js',
+    },
+  },
 });
 
 "build": "vite build",*/
