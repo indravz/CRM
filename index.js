@@ -1,3 +1,26 @@
+
+/* // Import the Vite configuration from a separate file
+import viteConfig from './vite.config.js';
+
+// Create a Vite server and add it as middleware to Express
+createServer({...viteConfig, server: { middlewareMode: true }}).then((vite) => {
+  app.use(vite.middlewares);
+  // Serve the built assets
+  app.use(express.static(path.join(__dirname, 'dist')));
+
+  // Define a route that responds with a status code of 200
+  app.get('/', (req, res) => {
+    res.sendStatus(200);
+  });
+*/
+
+/* export default {
+  build: {
+    outDir: 'dist'
+  }
+}; 
+
+"build": "vite build",*/
 //
 import express from 'express';
 import routes from './src/routes/crmRoutes';
