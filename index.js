@@ -1,18 +1,21 @@
 
-/*import express from 'express';
+/*
 
-const app = express();
+const path = require('path');
 
-app.get('/', (req, res) => {
-  res.send('Hello, world!');
-});
-
-const port = 3000;
-
-app.listen(port, () => {
-  console.log(`Server listening on port ${port}`);
-});
-
+module.exports = {
+  target: 'node',
+  mode: 'production',
+  entry: './index.js',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+  },
+  resolve: {
+    extensions: ['.js'],
+  },
+  externals: [],
+};
 ##
 import webpack from 'webpack';
 import config from './webpack.config.js';
