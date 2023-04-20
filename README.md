@@ -1,3 +1,19 @@
+// Import the Vite configuration from a separate file
+import viteConfig from './vite.config.js';
+
+// Create a Vite server and add it as middleware to Express
+createServer({...viteConfig, server: { middlewareMode: true }}).then((vite) => {
+  app.use(vite.middlewares);
+  // Serve the built assets
+  app.use(express.static(path.join(__dirname, 'dist')));
+
+  // Define a route that responds with a status code of 200
+  app.get('/', (req, res) => {
+    res.sendStatus(200);
+  });
+  
+  
+
 What is Restful API?
 Restful api is a way to transact  with a backend using http transactions. We use a series of calls like get, POST, PUT, delete calls to the backend(url)
 
