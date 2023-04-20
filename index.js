@@ -14,11 +14,13 @@ createServer({...viteConfig, server: { middlewareMode: true }}).then((vite) => {
   });
 */
 
-/* export default {
+/* import { defineConfig } from 'vite';
+
+export default defineConfig({
   build: {
     outDir: 'dist'
   }
-}; 
+});
 
 "build": "vite build",*/
 //
