@@ -1,6 +1,29 @@
 
 /*
 
+          local http = require "resty.http"
+          
+          local httpc = http.new()
+          local res, err = httpc:request_uri("http://example.com", {
+            method = "GET",
+            headers = {
+              ["User-Agent"] = "Kong/1.0"
+            }
+          })
+          
+          if not res then
+            kong.log.err("failed to send HTTP request: ", err)
+            return kong.response.exit(500, { message = "An unexpected error occurred" })
+          end
+          
+          if res.status ~= 200 then
+            kong.log.err("received non-200 response status: ", res.status)
+            return kong.response.exit(502, { message = "Received non-200 response status" })
+          end
+          
+          
+          
+
 const path = require('path');
 
 module.exports = {
